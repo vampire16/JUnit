@@ -14,4 +14,16 @@ public class FirstName {
         boolean firstName=obj.checkFirstName("vaibhav");
         Assert.assertFalse(firstName);
     }
+
+    @Test
+    public void givenLastName_whenValid_thenTrue() {
+        boolean lastName=obj.checkLastName("VampiRe");
+        Assert.assertTrue(lastName);
+    }
+
+    @Test
+    public void givenLastName_whenInValid_thenFalse() {
+        boolean lastName=obj.checkLastName("vampiRe");
+        Assert.assertFalse(lastName);
+    }
 }

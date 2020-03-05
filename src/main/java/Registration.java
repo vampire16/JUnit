@@ -10,4 +10,8 @@ public class Registration {
     public boolean checkFirstName(String fname) {
         return Pattern.matches(pattern, fname);
     }
+
+    public boolean checkLastName(String lname) {
+        return Pattern.matches(pattern, lname);
+    }
 }
