@@ -38,4 +38,16 @@ public class TestCases {
         boolean mail=obj.checkMail("abcbl.co");
         Assert.assertFalse(mail);
     }
+
+    @Test
+    public void givenMobNumber_whenValid_thenTrue() {
+        boolean mobNumber=obj.checkMobNumber("91 8108937233");
+        Assert.assertTrue(mobNumber);
+    }
+
+    @Test
+    public void givenMobNumber_whenInValid_thenFalse() {
+        boolean mobNumber=obj.checkMobNumber("91-8108937233");
+        Assert.assertFalse(mobNumber);
+    }
 }

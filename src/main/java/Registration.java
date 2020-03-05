@@ -3,7 +3,7 @@ import java.util.regex.Pattern;
 public class Registration {
     String pattern="^[A-Z][a-zA-Z]{2,}$";
     String mailPattern="^[a-z]{1,}([.]?[-]?[+]?[a-z0-9]{1,})?[@]{1}[a-z0-9]{1,}[.]{1}[a-z]{2,}([.]?[a-z]{2,})?$";
-
+    String mobPattern="^[0-9]{2}[ ][0-9]{10}$";
     public static void main(String[] args) {
         System.out.println("Welcome");
     }
@@ -18,5 +18,9 @@ public class Registration {
 
     public boolean checkMail(String mail) {
         return Pattern.matches(mailPattern, mail);
+    }
+
+    public boolean checkMobNumber(String number) {
+        return Pattern.matches(mobPattern, number);
     }
 }
