@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class FirstName {
+public class TestCases {
     Registration obj=new Registration();
 
     @Test
@@ -25,5 +25,17 @@ public class FirstName {
     public void givenLastName_whenInValid_thenFalse() {
         boolean lastName=obj.checkLastName("vampiRe");
         Assert.assertFalse(lastName);
+    }
+
+    @Test
+    public void givenMail_whenValid_thenTrue() {
+        boolean mail=obj.checkMail("abc.xyz@bl.co.in");
+        Assert.assertTrue(mail);
+    }
+
+    @Test
+    public void givenMail_whenInValid_thenFalse() {
+        boolean mail=obj.checkMail("abcbl.co");
+        Assert.assertFalse(mail);
     }
 }
