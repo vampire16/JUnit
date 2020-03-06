@@ -53,13 +53,13 @@ public class TestCases {
 
     @Test
     public void givenPassword_whenValid_thenTrue() {
-        boolean password=obj.checkPassword("gjaaj67u55jsjjDSF");
+        boolean password=obj.checkPassword("gjaaj67u55Djsjj");
         Assert.assertTrue(password);
     }
 
     @Test
     public void givenPassword_whenInValid_thenFalse() {
-        boolean password=obj.checkPassword("gjaaj67u55jsjjDSF#");
+        boolean password=obj.checkPassword("gjaaj67u55jsjj");
         Assert.assertFalse(password);
     }
 }
