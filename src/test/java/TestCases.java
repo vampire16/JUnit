@@ -50,4 +50,16 @@ public class TestCases {
         boolean mobNumber=obj.checkMobNumber("91-8108937233");
         Assert.assertFalse(mobNumber);
     }
+
+    @Test
+    public void givenPassword_whenValid_thenTrue() {
+        boolean password=obj.checkPassword("gjaaj67u55jsjjDSF");
+        Assert.assertTrue(password);
+    }
+
+    @Test
+    public void givenPassword_whenInValid_thenFalse() {
+        boolean password=obj.checkPassword("gjaaj67u55jsjjDSF#");
+        Assert.assertFalse(password);
+    }
 }
